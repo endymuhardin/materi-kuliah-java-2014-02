@@ -5,7 +5,7 @@ import static org.junit.Assert.*;
 
 public class DateUtilTest {
     @Test
-    public class testHitungHari(){
+    public void testHitungHari31(){
         DateUtil d = new DateUtil();
         
         // hasil yang diharapkan
@@ -15,6 +15,20 @@ public class DateUtilTest {
         Integer hasilAktual = d.hitungHari(2014,1);
         
         // suruh JUnit membandingkan
-        assertEquals(hasilAktual, hasilSeharusnya);
+        assertEquals(hasilSeharusnya, hasilAktual);
+    }
+    
+    @Test
+    public void testHitungHari30(){
+        DateUtil d = new DateUtil();
+        
+        // hasil yang diharapkan
+        Integer hasilSeharusnya = 30;
+        
+        // hasil yang keluar
+        Integer hasilAktual = d.hitungHari(2014,4);
+        
+        // suruh JUnit membandingkan
+        assertEquals(hasilSeharusnya, hasilAktual);
     }
 }
