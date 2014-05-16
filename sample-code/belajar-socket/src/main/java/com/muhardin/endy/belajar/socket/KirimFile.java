@@ -15,6 +15,7 @@ public class KirimFile {
 		Integer portPenerima = 10000;
 		Socket s = new Socket(ipPenerima, portPenerima);
 		OutputStream os = s.getOutputStream();
+		
 		// 3. Kirim isi file
 		int data;
 		while((data = is.read()) != -1){
