@@ -40,7 +40,7 @@ public class App {
        	System.out.println("Hasil parsing : "+waktu+", hari "+waktu.getDayOfWeek());
 
        	// Hitung selisih hari
-       	ChronoPeriod selisih = ChronoPeriod.between(waktu, LocalDate.from(waktuLokal));
+       	ChronoPeriod selisih = waktu.until(LocalDate.from(waktuLokal));
        	System.out.println("Jumlah hari : "+selisih.get(ChronoUnit.DAYS));
     }
 }
