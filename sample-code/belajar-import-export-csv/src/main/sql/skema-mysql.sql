@@ -5,7 +5,7 @@ create table mahasiswa(
 	email VARCHAR(255) NOT NULL,
 	tanggal_lahir DATE NOT NULL,
 	tahun_masuk INT NOT NULL,
-	PRIMARY KEY ("id"),
-	UNIQUE KEY "npm_unik" ("npm"),
-	UNIQUE KEY "email_unik" ("email")
+	PRIMARY KEY (`id`),
+	UNIQUE KEY `npm_unik` (`npm`),
+	UNIQUE KEY `email_unik` (`email`)
 );
